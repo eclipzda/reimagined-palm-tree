@@ -1,0 +1,324 @@
+body{
+    min-height: 100%;
+    font-family: 'Inter';
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/* ==== header ==== */
+header{
+    position: relative;
+    z-index: 10;
+    height: 72px;
+    padding: 20px 12px;
+    width: 100%;
+}
+.header_pc{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.header_left{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    flex: 1 1;
+}
+.header_left .header_crypto_coin{
+    display: none;
+}
+.logo{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo a{
+    color: #5d6785;
+}
+.header_links{
+    display: flex;
+    gap: 10px;
+}
+.header_links a{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 8px 14px;
+    color: #5d6785;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+
+.header_links a:hover{
+    background-color: rgba(192, 192, 192, 0.24);
+}
+.header_links button{
+    height: auto;
+    width: auto;
+    background-color: inherit;
+}
+.header_search{
+    width: 100%;
+    max-width: 480px;
+}
+.header_search_inner{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 16px;
+    background-color: #ffffffab;
+    border-radius: 15px;
+    border: solid 1px rgb(176, 179, 184);
+    transition: all .3s ease;
+}
+.header_search_inner:hover{
+    border-color: #3f60c4;
+}
+.header_search_inner input{
+    width: 100%;
+    font-size: 16px;
+    background-color: inherit;
+}
+.header_search_inner_slash{
+    width: 24px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: rgba(173, 188, 255, 0.24);
+    font-size: 12px;
+    
+}
+.header_right{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    flex: 1 1;
+}
+.header_right_find{
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.header_crypto_coin{
+    cursor: pointer;
+    padding: 8px 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all .3s ease;
+    border-radius: 5px;
+}
+.header_crypto_coin:hover{
+    background-color: rgba(192, 192, 192, 0.24);
+}
+.header_crypto_coin_eth img{
+    width: 20px;
+    height: 20px;
+}
+.header_connect_button_btn{
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 12px;
+    color: rgb(251, 17, 142);
+    background-color: rgba(250, 48, 156, 0.137);
+    border-radius: 20px;
+    transition: all .3s ease;
+}
+.header_connect_button_btn:hover{
+    color: rgba(251, 17, 142, 0.199);
+}
+.bg{
+    width: 200vw;
+    height: 200vh;
+    transform: translate(-50vw, -100vh);
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+@media (max-width: 1280px) {
+    .header_links a:nth-child(4){
+        display: none;
+    }
+}
+@media (max-width: 1100px) {
+    .header_search{
+        display: none;
+    }
+    .header_right_find{
+        display: flex;
+    }
+}
+@media (max-width: 768px) {
+    .header_links{
+        display: none;
+    }
+    .header_right .header_crypto_coin{
+        display: none;
+    }
+    .header_left .header_crypto_coin{
+        display: flex;
+    }
+}
+
+/* ==== header end ==== */
+/* ==== swapper ==== */
+.swaper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.swaper_content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 464px;
+    padding: 8px;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid rgb(210, 217, 238);
+    gap: 14px;
+}
+.swaper_lable{
+    display: flex;
+    justify-content: space-between;
+
+}
+.swaper_lable_left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 12px;
+}
+.swaper_lable_left button{
+    background-color: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2b2b2b;
+}
+.swaper_lable_left button:last-child{
+    opacity: 0.5;
+}
+.swaper_lable_right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+}
+.swaper_lable_right svg{
+    height: 18px;
+    height: 18px;
+}
+.swaper_inputs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.swaper_inputs input{
+    filter: none;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out 0s;
+    text-align: left;
+    font-size: 36px;
+    font-weight: 600;
+    color: rgb(13, 17, 28);
+    width: 100%;
+    position: relative;
+    font-weight: 400;
+    flex: 1 1 auto;
+    background-color: transparent;
+    font-size: 28px;
+}
+.swaper_up_input{
+    display: flex;
+    align-items: center;
+    background-color: rgba(173, 188, 255, 0.1);
+    border-radius: 10px;
+    padding: 16px;
+    padding-bottom: 24px;
+}
+.swaper_crypto_coin{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 20px;
+    background-color: rgba(173, 188, 255, 0.24);
+}
+.swaper_crypto_coin img{
+    width: 24px;
+    height: 24px;
+}
+.swaper_crypto_coin svg{
+    width: 12px;
+    height: auto;
+    font-weight: 600;
+}
+.swaper_crypto_coin span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.swaper_change{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(234, 234, 250);
+    border: 4px solid #fff;
+}
+.swaper_down_input_tokens{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 4px 8px;
+    background-color: rgb(251, 17, 142);
+    border-radius: 26px;
+}
+.swaper_down_input_tokens svg{
+    width: 16px;
+    height: 16px;
+}
+.connect-wallet{
+    width: 100%;
+    padding: 16px;
+    background-color: rgba(251, 17, 142, 0.178);
+    transition: all .3s ease;
+    color: rgb(251, 17, 142);
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 20px;
+}
+.connect-wallet:hover{
+    background-color: rgba(251, 17, 142, 0.308);
+
+}
